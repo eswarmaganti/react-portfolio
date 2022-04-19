@@ -1,0 +1,30 @@
+h1 {
+  font-size: 53px;
+  color: #ffd700;
+  font-family: "coolvetica";
+  position: relative;
+  margin: 20px 0;
+  font-weight: 400;
+  &::before {
+    content: "<h1>";
+    font-family: "La Belle Aurore";
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    opacity: 0.6;
+    display: block;
+    left: -10px;
+    top: -10px;
+  }
+  &::after {
+    content: "</h1>";
+    font-family: "La Belle Aurore";
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    opacity: 0.6;
+    display: block;
+    left: -10px;
+    bottom: -15px;
+  }
+}

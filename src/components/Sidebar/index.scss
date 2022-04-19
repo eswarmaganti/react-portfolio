@@ -1,0 +1,104 @@
+.nav-bar {
+  background-color: #181818;
+  width: 60px;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  .logo {
+    display: block;
+    padding: 8px 0;
+    img {
+      display: block;
+      margin: 8px auto;
+      width: 24px;
+      height: auto;
+      &.sub-logo {
+        width: 50px;
+      }
+    }
+  }
+  nav {
+    display: block;
+    text-align: center;
+    width: 100%;
+    a {
+      font-size: 22px;
+      display: block;
+      line-height: 51px;
+      height: 51px;
+      color: #4d4d4e;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+
+      svg {
+        transition: all 0.3s ease-out;
+      }
+      &:hover {
+        color: #ffd700;
+        svg {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: "";
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+      &:first-child {
+        &::after {
+          content: "HOME";
+        }
+      }
+      &.about-link {
+        &::after {
+          content: "ABOUT";
+        }
+      }
+      &.contact-link {
+        &::after {
+          content: "CONTACT";
+        }
+      }
+      &.active {
+        svg {
+          color: #ffd700;
+        }
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+      a {
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        padding: 7px 0;
+        transition: all 0.3s ease-out;
+        &:hover svg {
+          color: #ffd700;
+        }
+      }
+    }
+  }
+}

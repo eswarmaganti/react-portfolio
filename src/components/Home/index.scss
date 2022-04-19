@@ -1,0 +1,74 @@
+.home-page {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .text-zone {
+    height: 100%;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 53px;
+      color: #fff;
+      margin: 0;
+      font-family: "Coolvetica";
+      font-weight: 400;
+      margin: 20px 0;
+      &::before {
+        content: "<h1>";
+        font-family: "La Belle Aurore";
+        color: #ffd700;
+        font-size: 18px;
+        display: block;
+        margin-left: -10px;
+      }
+      &::after {
+        content: "</h1>";
+        font-family: "La Belle Aurore";
+        color: #ffd700;
+        display: block;
+        font-size: 18px;
+        margin-left: -10px;
+        animation: fadeIn 1s 1.7s backwards;
+      }
+      img {
+        width: 32px;
+        margin-left: 20px;
+        opacity: 0;
+        height: auto;
+        animation: rotateIn 1s linear both;
+        animation-delay: 1.4s;
+      }
+    }
+    h2 {
+      color: #bababa;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: "Poppins";
+      letter-spacing: 2px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+    .flat-button {
+      color: #ffd700;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 3px;
+      font-family: "Poppins";
+      border: 1px solid #ffd700;
+      margin-top: 25px;
+      float: left;
+      white-space: nowrap;
+      animation: fadeIn 1s 1.8s backwards;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-color: #ffd700;
+        color: #333;
+      }
+    }
+  }
+}
